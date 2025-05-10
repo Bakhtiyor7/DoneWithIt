@@ -1,29 +1,49 @@
 {
   "expo": {
     "name": "DoneWithIt",
+    "owner": "bakhtiyor7",
+    "runtimeVersion": "1.0.0",
     "slug": "DoneWithIt",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "plugins": ["expo-updates"],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.baxtiyoraxatov.myapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "package": "com.baxtiyoraxatov.myapp"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.bakhtiyor7.DoneWithIt"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e2866db8-5049-4147-be08-135d63ff83ac"
+      }
+    },
+
+    "updates": {
+      "url": "https://u.expo.dev/e2866db8-5049-4147-be08-135d63ff83ac"
+    },
+    "build": {
+      "production": {
+        "channel": "production"
+      }
     }
   }
 }
