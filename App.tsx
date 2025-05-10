@@ -5,7 +5,7 @@ import {
   View,
   SafeAreaView,
   Image,
-  TouchableOpacity,
+  TouchableHighlight,
 } from "react-native";
 
 export default function App() {
@@ -17,16 +17,12 @@ export default function App() {
       <Text numberOfLines={1} onPress={handlePress}>
         Hey, I am building a cool React Native app
       </Text>
-
-      <Image
-        blurRadius={5}
-        fadeDuration={1000}
-        style={{ width: 200, height: 300 }}
-        source={{
-          uri: "https://picsum.photos/200/300",
-        }}
-      />
-
+      <TouchableHighlight onPress={handlePress}>
+        <Image
+          source={{ uri: "https://reactjs.org/logo-og.png" }}
+          style={{ width: 400, height: 400 }}
+        />
+      </TouchableHighlight>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
