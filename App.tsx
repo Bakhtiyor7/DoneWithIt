@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
@@ -8,6 +7,8 @@ import {
   TouchableHighlight,
   Button,
   Alert,
+  Platform,
+  StatusBar,
 } from "react-native";
 
 export default function App() {
@@ -47,19 +48,21 @@ export default function App() {
           )
         }
       />
-      <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
 
-const containerStyle = { backgroundColor: "orange" };
+const containerStyle = {
+  backgroundColor: "orange",
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "skyblue",
+    // this is the proper way to calculate the status bar height for android
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     alignItems: "center",
-    justifyContent: "center",
   },
   tinyLogo: {
     width: 100,
